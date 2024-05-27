@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main(){
+  srand(time(0));
+  int numeroCerto = rand() % 15;
+  int tentativas = 7;
+  int adivinhas;
+
+  printf("Adivinhe um numero de 0 á 14\n");
+  while(tentativas > 0){
+  printf("Faça a sua adivinha\n");
+  scanf("%d", &adivinhas);
+
+if( adivinhas==numeroCerto){
+  printf("Parabéns,acertaste o numero\n ");
+  break;
+} else if (adivinhas > numeroCerto){
+  printf("Tenta mais uma vez,o numero e maior\n");
+} else{
+  printf("Tenta outra vez\n");
+}
+
+ tentativas--;	
+}
+return 0;
+}
