@@ -8,7 +8,7 @@ int main(){
   int adivinhas;
 
   printf("Adivinhe um numero de 0 á 14\n");
-  while(tentativas > 0){
+  for(tentativas=7;tentativas > 0;tentativas--) {
   printf("Faça a sua adivinha\n");
   scanf("%d", &adivinhas);
 
@@ -19,9 +19,7 @@ if( adivinhas==numeroCerto){
   printf("Tenta mais uma vez,o numero e maior\n");
 } else{
   printf("Tenta outra vez\n");
-}
-
- tentativas--;	
+}	
 }
 return 0;
 }
